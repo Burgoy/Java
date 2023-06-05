@@ -2,7 +2,7 @@ package OOP_Begin;
 
 import java.util.Random;
 
-public class Kniga {
+public class StackTest {
     public static void main(String[] args) {
         Stack stack = new Stack(0);
 
