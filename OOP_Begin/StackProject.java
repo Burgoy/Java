@@ -3,7 +3,7 @@ package Stack;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Main implements id{
+public class StackProject implements id{
 
     public void i(){
 
