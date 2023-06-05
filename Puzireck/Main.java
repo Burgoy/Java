@@ -3,64 +3,7 @@ package Puzireck;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Main {
-    public static void main(String[] args) {
-        Sort sort = new Sort(1, 5, 10);
-        System.out.println(Arrays.toString(sort.CreateMasive()));//Создали массив из случайных чисел
-    }
-}
-
-class Sort{
-    Random random = new Random();
-    int MinNum, MaxNum, Legit;
-    Sort(int MinNum, int MaxNum, int Legit){
-        this.Legit = Legit;
-        this.MaxNum = MaxNum;
-        this.MinNum = MinNum;
-    }
-
-    int[] CreateMasive(){
-        int i[] = new int[Legit];
-        for (int var = 0; var < Legit; var++) i[var] = random.nextInt(MinNum, MaxNum);
-        return i;
-    }
-
-    int[] SortPuz(int[] Massive){
-        Massive = this.CreateMasive();
-        int var1, var2, num1, num2;//var = значение которое будет передаваемым, num1 и num2 первое ззначение и второе;
-        boolean a = true;//Если А истено то значит сортировка вверх, а если ложна то вниз
-        boolean i = true;//Если I истено то значит что сортировка продолжается
-
-        num1 = 0;
-        num2 = 1;
-
-
-        while (i){
-            if (Massive[num1] > Massive[num2]){
-                var1 = Massive[num2];
-
-            }
-        }
-
-        return Massive;
-    }
-}
-interface id{
-    void i();
-    void setLegit(int i);
-    int legit = 10;
-
-}
-
-abstract class Int implements id{
-
-    @Override
-    public void setLegit(int i) {
-        System.out.println("Реалезация интерфейса в классе Int" + i);
-    }
-}
-
-class Interface implements id{
+public class Main implements id{
 
     public void i(){
 
@@ -79,6 +22,23 @@ class Interface implements id{
         id.i();
     }
 }
+
+
+interface id{
+    void i();
+    void setLegit(int i);
+    int legit = 10;
+
+}
+
+abstract class Int implements id{
+
+    @Override
+    public void setLegit(int i) {
+        System.out.println("Реалезация интерфейса в классе Int" + i);
+    }
+}
+
 
 
 
